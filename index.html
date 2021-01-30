@@ -1,37 +1,218 @@
-<h1>Art Union is for you <span class="typed1"></span> of all levels!</br></br><span id="secondline" style="text-align: right;">We have <span class="typed2"></span> to help us grow.</h1>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-        <script>
-          var typed4 = new Typed(".typed1", {
-            strings: [
-              "artists,",
-              "writers,",
-              "musicians,",
-              "composers,",
-              "& producers",
-            ],
-            typeSpeed: 45,
-            backSpeed: 25,
-            bindInputFocusEvents: true,
-            loop: true,
-            cursorChar: "",
-            backDelay: 1000,
-            startDelay: 1000,
-          });
-        </script>
-<script>
-          var typed4 = new Typed(".typed2", {
-            strings: [
-              "challenges,",
-              "tutorials,",
-              "and",
-              "a feedback area",
-            ],
-            typeSpeed: 45,
-            backSpeed: 25,
-            bindInputFocusEvents: true,
-            loop: true,
-            cursorChar: "",
-            backDelay: 1000,
-            startDelay: 1000,
-          });
-        </script>
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap"
+  rel="stylesheet"
+/>
+<div id="main" style="font-size: large; text-align: center; position: relative">
+  <div
+    id="txt"
+    style="
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    "
+  >
+    <div class="iframe-link">
+      <a href="https://discord.gg/U4H65Ukyjx">
+        <img
+          width="90"
+          height="90"
+          src="https://cdn.discordapp.com/icons/713088576052789399/a_4c21edbb17ccc21a49529cd7d33e975b.webp?size=128"
+        />
+        <iframe
+          src="https://ptb.discord.com/widget?id=713088576052789399&theme=dark"
+          width="350"
+          height="250"
+          allowtransparency="true"
+          frameborder="0"
+          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+        >
+        </iframe>
+      </a>
+    </div>
+    <img
+      src="https://discordapp.com/api/guilds/713088576052789399/embed.png"
+      style="padding-top: 1em"
+    />
+    <style>
+      .iframe-link {
+        margin: auto;
+        width: fit-content;
+      }
+
+      .iframe-link iframe {
+        width: fit-content;
+        display: none;
+      }
+
+      .iframe-link:hover iframe {
+        width: fit-content;
+        display: block;
+        margin: auto;
+      }
+    </style>
+    <h1 style="font-family: Roboto Mono, monospace; padding-top: 0">
+      Art Union is for you <br />
+      <span class="typed1" style="background: yellow"> </span><br />of all
+      levels!
+    </h1>
+    <p
+      class="typed2"
+      style="font-size: large; font-family: 'Times New Roman', Times, serif"
+    ></p>
+    <br />
+    <div id="fehead">
+      <a>Features:</a>
+    </div>
+    <br />
+    <br />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <div id="features">
+      <a>
+        🎉 Daily and weekly art & writing challenges to keep the creative spirit
+        going 🎉</a
+      >
+      <a>🎉 Monthly art, music and writing contests 🎉</a>
+      <a>🎉 Portfolio channels for creators 🎉</a>
+      <a>🎉 Supportive community eager to teach and give feedback 🎉</a>
+      <a>🎉 Multiple collaborative events 🎉</a>
+      <a>🎉 Artistic memes (yes, that is a feature) 🎉</a>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div id="welike">
+      <a>We like <span class="typed3"></span></a>
+    </div>
+    <style>
+      #welike a {
+        display: none;
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #welike {
+        position: relative;
+      }
+      #fehead a {
+        display: none;
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #fehead {
+        position: relative;
+      }
+      #features a {
+        display: none;
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #features {
+        position: relative;
+      }
+    </style>
+    <script>
+      (function () {
+        setTimeout(() => {
+          var a = $("#fehead").children();
+          var index = 0;
+          run();
+
+          function run() {
+            a.filter(".active").fadeOut(500).removeClass("active");
+            a.eq(index).fadeIn(500).addClass("active");
+          }
+        }, 24000);
+      })();
+      (function () {
+        setTimeout(() => {
+          var a = $("#features").children();
+          var index = 0;
+          run();
+
+          function run() {
+            a.filter(".active").fadeOut(500).removeClass("active");
+            a.eq(index).fadeIn(500).addClass("active");
+            index = (index + 1) % a.length;
+            setTimeout(run, 3000);
+          }
+        }, 25000);
+      })();
+      (function () {
+        setTimeout(() => {
+          var a = $("#welike").children();
+          var index = 0;
+          run();
+
+          function run() {
+            a.filter(".active").fadeOut(500).removeClass("active");
+            a.eq(index).fadeIn(500).addClass("active");
+          }
+        }, 34500);
+      })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+      var typed4 = new Typed(".typed1", {
+        strings: [
+          "artists",
+          "writers",
+          "musicians",
+          "composers",
+          "producers",
+          "all",
+        ],
+        typeSpeed: 80,
+        backSpeed: 25,
+        bindInputFocusEvents: true,
+        loop: false,
+        cursorChar: ",",
+        backDelay: 1000,
+      });
+    </script>
+    <script>
+      setTimeout(() => {
+        var typed4 = new Typed(".typed2", {
+          strings: [
+            "We have <strong>challenges</strong>.",
+            "We have <strong>tutorials</strong>.",
+            "We have a <strong>feedback area</strong>.",
+            "We have a <strong>flex corner</strong>.",
+            "We have a <strong>chat area</strong>.",
+            "I mean, that last one was pretty obvious wasn't it, lmao.",
+          ],
+          typeSpeed: 25,
+          backSpeed: 25,
+          bindInputFocusEvents: true,
+          loop: false,
+          cursorChar: "",
+          backDelay: 1000,
+        });
+      }, 11500);
+    </script>
+    <script>
+      setTimeout(() => {
+        var typed4 = new Typed(".typed3", {
+          strings: [
+            "<strong>Pixel Art</strong>.",
+            "<strong>Digital Art</strong>.",
+            "<strong>Traditional Art</strong>.",
+            "<strong>Applied Art</strong>.",
+            "<strong>Photography</strong>.",
+            "<strong>Music</strong>.",
+            "<strong>Writing</strong>.",
+            "<strong>All kinds of art</strong>.",
+          ],
+          typeSpeed: 25,
+          backSpeed: 25,
+          bindInputFocusEvents: true,
+          loop: true,
+          cursorChar: "|",
+          backDelay: 1000,
+        });
+      }, 35000);
+    </script>
+  </div>
+</div>
