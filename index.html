@@ -13,27 +13,26 @@
     "
   >
     <div class="iframe-link">
-      <a href="https://discord.gg/U4H65Ukyjx">
-        <img
-          width="90"
-          height="90"
-          src="https://cdn.discordapp.com/icons/713088576052789399/a_4c21edbb17ccc21a49529cd7d33e975b.webp?size=128"
-        />
-        <iframe
-          src="https://ptb.discord.com/widget?id=713088576052789399&theme=dark"
-          width="350"
-          height="250"
-          allowtransparency="true"
-          frameborder="0"
-          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-        >
-        </iframe>
-      </a>
+      <img
+        width="90"
+        height="90"
+        src="https://cdn.discordapp.com/icons/713088576052789399/a_4c21edbb17ccc21a49529cd7d33e975b.webp?size=128"
+      />
+      <iframe
+        src="https://ptb.discord.com/widget?id=713088576052789399&theme=dark"
+        width="350"
+        height="250"
+        allowtransparency="true"
+        frameborder="0"
+        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+      >
+      </iframe>
     </div>
-    <img
-      src="https://discordapp.com/api/guilds/713088576052789399/embed.png"
-      style="padding-top: 1em"
-    />
+    <a href="https://discord.gg/U4H65Ukyjx"
+      ><img
+        src="https://discordapp.com/api/guilds/713088576052789399/embed.png"
+        style="padding-top: 1em"
+    /></a>
     <style>
       .iframe-link {
         margin: auto;
@@ -66,17 +65,21 @@
     </div>
     <br />
     <br />
+    <br />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <div id="features">
       <a>
-        🎉 Daily and weekly art & writing challenges to keep the creative spirit
-        going 🎉</a
+        🎉 <strong>Daily and weekly challenges</strong> for art & writing to keep
+        the creative spirit going 🎉</a
       >
-      <a>🎉 Monthly art, music and writing contests 🎉</a>
-      <a>🎉 Portfolio channels for creators 🎉</a>
-      <a>🎉 Supportive community eager to teach and give feedback 🎉</a>
-      <a>🎉 Multiple collaborative events 🎉</a>
-      <a>🎉 Artistic memes (yes, that is a feature) 🎉</a>
+      <a>🎉 <strong>Monthly contests</strong> for art, music and writing 🎉</a>
+      <a>🎉 <strong>Portfolio channels</strong> for creators 🎉</a>
+      <a
+        >🎉 <strong>Supportive community</strong> eager to teach and give
+        feedback 🎉</a
+      >
+      <a>🎉 <strong>Multiple collaborative events</strong> 🎉</a>
+      <a>🎉 Artistic <strong>memes</strong> (yes, that is a feature) 🎉</a>
     </div>
     <br />
     <br />
@@ -135,8 +138,10 @@
           function run() {
             a.filter(".active").fadeOut(500).removeClass("active");
             a.eq(index).fadeIn(500).addClass("active");
-            index = (index + 1) % a.length;
-            setTimeout(run, 3000);
+            if (index != a.length - 1) {
+              index = (index + 1) % a.length;
+              setTimeout(run, 3000);
+            }
           }
         }, 25000);
       })();
