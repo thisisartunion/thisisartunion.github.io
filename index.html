@@ -10,8 +10,11 @@
     href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
     rel="stylesheet"
   />
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap"
+    rel="stylesheet"
+  />
   <meta
     property="og:description"
     content="Art Union is for you artists, writers, musicians, composers & producers of all levels! We have challenges, tutorials and feedback area to help us grow. Or a Flex corner to share and showcase our pride and joy. Or simply mingle with fellow creators and join our fun gaming, chatting, memeing or simple creating."
@@ -69,6 +72,43 @@
           src="https://discordapp.com/api/guilds/713088576052789399/embed.png"
           style="padding-top: 1em"
       /></a>
+      <div id="partnershead">
+        <a style="font-family: monospace; font-size: small">Partners:</a>
+      </div>
+      <div id="partners">
+        <a
+          ><img src="./WhALogo.webp" /><br />
+          <p style="font-size: x-small">Wholesome Artists</p>
+        </a>
+        <a
+          ><img src="./TPxLogo.webp" /><br />
+          <p style="font-size: x-small">Terraria Pixel Art</p>
+        </a>
+        <a
+          ><img src="./GDs.webp" /><br />
+          <p style="font-size: x-small">Game Dev Server</p>
+        </a>
+        <a
+          ><img src="./AALogo.gif" /><br />
+          <p style="font-size: x-small">Artists Alley</p>
+        </a>
+        <a
+          ><img src="./CdLogo.webp" /><br />
+          <p style="font-size: x-small">Game Dev Hut</p>
+        </a>
+        <a
+          ><img src="./GDvLogo.gif" /><br />
+          <p style="font-size: x-small">Game Dev 101</p>
+        </a>
+        <a
+          ><img src="./ArCLogo.webp" /><br />
+          <p style="font-size: x-small">Artist's Corner</p>
+        </a>
+        <a
+          ><img src="./CRlyLogo.gif" /><br />
+          <p style="font-size: x-small">Curley's Good Vibes Server</p>
+        </a>
+      </div>
       <style>
         .iframe-link {
           margin: auto;
@@ -107,20 +147,16 @@
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-        <div id="features" style="font-family: Rajdhani;">
+        <div id="features" style="font-family: Rajdhani">
           <a>
             <strong>Daily and weekly challenges</strong> for art & writing
-            </a
-          >
-          <a
-            ><strong>Monthly contests</strong> for art, music and writing
-            </a
-          >
+          </a>
+          <a><strong>Monthly contests</strong> for art, music and writing </a>
           <a> <strong>Portfolio channels</strong> for creators </a>
           <a
             ><strong>Supportive community</strong> eager to teach and give
-            feedback </a
-          >
+            feedback
+          </a>
           <a>Multiple <strong>collaborative events</strong> </a>
           <a>Artistic <strong>memes</strong> (yes, that is a feature) </a>
         </div>
@@ -159,6 +195,24 @@
           width: auto;
           padding-top: 1em;
         }
+        #partnershead a {
+          display: none;
+        }
+        #partnershead {
+          position: relative;
+          width: auto;
+          padding-top: 1em;
+        }
+        #partners a {
+          display: none;
+          border-radius: 1em;
+        }
+        #partners {
+          display: none;
+          position: relative;
+          width: auto;
+          padding-top: 1em;
+        }
       </style>
       <script>
         var typed4 = new Typed(".typed1", {
@@ -185,6 +239,7 @@
                 "We have a <strong>flex corner</strong>.",
                 "We have a <strong>chat area</strong>.",
                 "I mean, that last one was pretty obvious wasn't it, lmao.",
+                "I mean, that last one was pretty obvious wasn't it.",
               ],
               typeSpeed: 25,
               backSpeed: 25,
@@ -263,6 +318,44 @@
                                       bindInputFocusEvents: true,
                                       loop: false,
                                       cursorChar: "",
+                                      onComplete: (self) => {
+                                        (async function () {
+                                          var a = $("#partnershead").children();
+                                          var index = 0;
+                                          run();
+
+                                          function run() {
+                                            a.filter(".active")
+                                              .fadeOut(500)
+                                              .removeClass("active");
+                                            a.eq(index)
+                                              .fadeIn(500)
+                                              .addClass("active");
+                                          }
+                                        })().then(() => {
+                                          setTimeout(() => {
+                                            (async function () {
+                                              var a = $("#partners").children();
+                                              var index = 0;
+                                              document.getElementById(
+                                                "partners"
+                                              ).style.display = "block";
+                                              run();
+
+                                              function run() {
+                                                a.filter(".active")
+                                                  .fadeOut(500)
+                                                  .removeClass("active");
+                                                a.eq(index)
+                                                  .fadeIn(500)
+                                                  .addClass("active");
+                                                index = (index + 1) % a.length;
+                                                setTimeout(run, 3000);
+                                              }
+                                            })();
+                                          }, 1000);
+                                        });
+                                      },
                                     });
                                   });
                                 },
