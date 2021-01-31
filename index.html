@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Art Union</title>
   <meta property="og:title" content="Art Union" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
   <meta
     property="og:description"
     content="Art Union is for you artists, writers, musicians, composers & producers of all levels! We have challenges, tutorials and feedback area to help us grow. Or a Flex corner to share and showcase our pride and joy. Or simply mingle with fellow creators and join our fun gaming, chatting, memeing or simple creating."
@@ -21,10 +28,7 @@
     href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap"
     rel="stylesheet"
   />
-  <div
-    id="main"
-    style="font-size: large; text-align: center; position: relative"
-  >
+  <div id="main" style="text-align: center; position: relative">
     <div
       id="txt"
       style="
@@ -35,7 +39,9 @@
       "
     >
       <div class="iframe-link">
-        <img width="90" height="90" src="./logo.webp" />
+        <div>
+          <img style="width: 8em; height: 8em" src="./logo.webp" />
+        </div>
         <iframe
           src="https://ptb.discord.com/widget?id=713088576052789399&theme=dark"
           width="350"
@@ -45,6 +51,18 @@
           sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
         >
         </iframe>
+      </div>
+      <div>
+        <a
+          id="leenk"
+          href="https://discord.gg/U4H65Ukyjx"
+          style="
+            text-decoration: none;
+            color: inherit;
+            padding-top: 1em;
+            font-family: 'Quicksand', monospace;
+          "
+        ></a>
       </div>
       <a href="https://discord.gg/U4H65Ukyjx"
         ><img
@@ -68,45 +86,52 @@
           margin: auto;
         }
       </style>
-      <h1 style="font-family: Roboto Mono, monospace; padding-top: 0">
-        Art Union is for you <br />
-        <span class="typed1" style="background: yellow"></span><br />of all
-        levels!
-      </h1>
-      <p
-        class="typed2"
-        style="font-size: large; font-family: 'Times New Roman', Times, serif"
-      ></p>
-      <br />
-      <div id="fehead">
-        <a>Features:</a>
-      </div>
-      <br />
-      <br />
-      <br />
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-      <div id="features">
-        <a>
-          🎉 <strong>Daily and weekly challenges</strong> for art & writing to
-          keep the creative spirit going 🎉</a
+      <div id="contend">
+        <h1
+          style="
+            font-size: larger;
+            font-family: Roboto Mono, monospace;
+            padding-top: 0;
+          "
         >
-        <a
-          >🎉 <strong>Monthly contests</strong> for art, music and writing 🎉</a
-        >
-        <a>🎉 <strong>Portfolio channels</strong> for creators 🎉</a>
-        <a
-          >🎉 <strong>Supportive community</strong> eager to teach and give
-          feedback 🎉</a
-        >
-        <a>🎉 <strong>Multiple collaborative events</strong> 🎉</a>
-        <a>🎉 Artistic <strong>memes</strong> (yes, that is a feature) 🎉</a>
+          Art Union is for you <br />
+          <span class="typed1" style="background: yellow"></span><br />of all
+          levels!
+        </h1>
+        <p
+          class="typed2"
+          style="font-size: large; font-family: 'Times New Roman', Times, serif"
+        ></p>
+        <div id="fehead">
+          <a>Features:</a>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+        <div id="features" style="font-family: Rajdhani;">
+          <a>
+            <strong>Daily and weekly challenges</strong> for art & writing
+            </a
+          >
+          <a
+            ><strong>Monthly contests</strong> for art, music and writing
+            </a
+          >
+          <a> <strong>Portfolio channels</strong> for creators </a>
+          <a
+            ><strong>Supportive community</strong> eager to teach and give
+            feedback </a
+          >
+          <a>Multiple <strong>collaborative events</strong> </a>
+          <a>Artistic <strong>memes</strong> (yes, that is a feature) </a>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div id="welike">
+          <a>We love <span class="typed3"></span></a>
+        </div>
       </div>
-      <br />
-      <br />
-      <br />
-      <div id="welike">
-        <a>We like <span class="typed3"></span></a>
-      </div>
+
       <style>
         #welike a {
           display: none;
@@ -128,57 +153,13 @@
         }
         #features a {
           display: none;
-          position: fixed;
-          left: 50%;
-          transform: translate(-50%, -50%);
         }
         #features {
           position: relative;
+          width: auto;
+          padding-top: 1em;
         }
       </style>
-      <script>
-        (function () {
-          setTimeout(() => {
-            var a = $("#fehead").children();
-            var index = 0;
-            run();
-
-            function run() {
-              a.filter(".active").fadeOut(500).removeClass("active");
-              a.eq(index).fadeIn(500).addClass("active");
-            }
-          }, 24500);
-        })();
-        (function () {
-          setTimeout(() => {
-            var a = $("#features").children();
-            var index = 0;
-            run();
-
-            function run() {
-              a.filter(".active").fadeOut(500).removeClass("active");
-              a.eq(index).fadeIn(500).addClass("active");
-              if (index != a.length - 1) {
-                index = (index + 1) % a.length;
-                setTimeout(run, 3000);
-              }
-            }
-          }, 25500);
-        })();
-        (function () {
-          setTimeout(() => {
-            var a = $("#welike").children();
-            var index = 0;
-            run();
-
-            function run() {
-              a.filter(".active").fadeOut(500).removeClass("active");
-              a.eq(index).fadeIn(500).addClass("active");
-            }
-          }, 43500);
-        })();
-      </script>
-      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
       <script>
         var typed4 = new Typed(".typed1", {
           strings: [
@@ -195,49 +176,108 @@
           loop: false,
           cursorChar: ",",
           backDelay: 1000,
+          onComplete: (self) => {
+            var typed4 = new Typed(".typed2", {
+              strings: [
+                "We have <strong>challenges</strong>.",
+                "We have <strong>tutorials</strong>.",
+                "We have a <strong>feedback area</strong>.",
+                "We have a <strong>flex corner</strong>.",
+                "We have a <strong>chat area</strong>.",
+                "I mean, that last one was pretty obvious wasn't it, lmao.",
+              ],
+              typeSpeed: 25,
+              backSpeed: 25,
+              bindInputFocusEvents: true,
+              loop: false,
+              cursorChar: "",
+              backDelay: 1000,
+              onComplete: (self) => {
+                (async function () {
+                  var a = $("#fehead").children();
+                  var index = 0;
+                  run();
+
+                  function run() {
+                    a.filter(".active").fadeOut(500).removeClass("active");
+                    a.eq(index).fadeIn(500).addClass("active");
+                  }
+                })().then(
+                  (async function () {
+                    setTimeout(() => {
+                      var a = $("#features").children();
+                      var index = 0;
+                      run();
+
+                      function run() {
+                        a.filter(".active").fadeOut(500).removeClass("active");
+                        a.eq(index).fadeIn(500).addClass("active");
+                        if (index != a.length - 1) {
+                          index = (index + 1) % a.length;
+                          setTimeout(run, 3000);
+                        } else {
+                          setTimeout(() => {
+                            (async function () {
+                              var a = $("#welike").children();
+                              var index = 0;
+                              run();
+
+                              function run() {
+                                a.filter(".active")
+                                  .fadeOut(500)
+                                  .removeClass("active");
+                                a.eq(index).fadeIn(500).addClass("active");
+                              }
+                            })().then(() => {
+                              var typed4 = new Typed(".typed3", {
+                                strings: [
+                                  "<strong>Pixel Art</strong>.",
+                                  "<strong>Digital Art</strong>.",
+                                  "<strong>Traditional Art</strong>.",
+                                  "<strong>Applied Art</strong>.",
+                                  "<strong>Photography</strong>.",
+                                  "<strong>Music</strong>.",
+                                  "<strong>Writing</strong>.",
+                                  "<strong>All kinds of art</strong>.",
+                                ],
+                                typeSpeed: 25,
+                                backSpeed: 25,
+                                bindInputFocusEvents: true,
+                                loop: false,
+                                cursorChar: "|",
+                                startDelay: 1000,
+                                backDelay: 1000,
+                                onComplete: (self) => {
+                                  $("#contend").fadeOut(1000, () => {
+                                    var typed4 = new Typed("#leenk", {
+                                      strings: [
+                                        "Join lmao",
+                                        "Join lol",
+                                        "Join now!<br />https://discord.gg/<strong>U4H65Ukyjx</strong>",
+                                        "Join now!<br />https://discord.gg/<strong>atyebChFAB</strong>",
+                                        "Join now!<br />https://discord.gg/<strong>rfzaMsktbn</strong>",
+                                        "Join now!<br />https://discord.gg/<strong>bqcsVNF</strong>",
+                                      ],
+                                      typeSpeed: 25,
+                                      backSpeed: 25,
+                                      bindInputFocusEvents: true,
+                                      loop: false,
+                                      cursorChar: "",
+                                    });
+                                  });
+                                },
+                              });
+                            });
+                          }, 2000);
+                        }
+                      }
+                    }, 1000);
+                  })()
+                );
+              },
+            });
+          },
         });
-      </script>
-      <script>
-        setTimeout(() => {
-          var typed4 = new Typed(".typed2", {
-            strings: [
-              "We have <strong>challenges</strong>.",
-              "We have <strong>tutorials</strong>.",
-              "We have a <strong>feedback area</strong>.",
-              "We have a <strong>flex corner</strong>.",
-              "We have a <strong>chat area</strong>.",
-              "I mean, that last one was pretty obvious wasn't it, lmao.",
-            ],
-            typeSpeed: 25,
-            backSpeed: 25,
-            bindInputFocusEvents: true,
-            loop: false,
-            cursorChar: "",
-            backDelay: 1000,
-          });
-        }, 12500);
-      </script>
-      <script>
-        setTimeout(() => {
-          var typed4 = new Typed(".typed3", {
-            strings: [
-              "<strong>Pixel Art</strong>.",
-              "<strong>Digital Art</strong>.",
-              "<strong>Traditional Art</strong>.",
-              "<strong>Applied Art</strong>.",
-              "<strong>Photography</strong>.",
-              "<strong>Music</strong>.",
-              "<strong>Writing</strong>.",
-              "<strong>All kinds of art</strong>.",
-            ],
-            typeSpeed: 25,
-            backSpeed: 25,
-            bindInputFocusEvents: true,
-            loop: true,
-            cursorChar: "|",
-            backDelay: 1000,
-          });
-        }, 44000);
       </script>
     </div>
   </div>
